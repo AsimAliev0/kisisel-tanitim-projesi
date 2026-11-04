@@ -6,3 +6,6 @@ https://drive.google.com/file/d/1c4d8vbzJaboop5ylNVdQ-_g3MugHF2dO/view?usp=shari
 
 hafta2
 https://drive.google.com/file/d/1bYE5k28xYQGa1E2q1nE6AVcbpBdq1w-E/view?usp=drive_link
+
+hafta3 
+https://drive.google.com/file/d/1pFiI1-fOdS9x15_Biz2kW3jcVaGfSX4C/view?usp=drive_link
