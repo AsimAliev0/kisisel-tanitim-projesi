@@ -10,19 +10,48 @@
     <header>
         <h1>Kişisel Web Sitem</h1>
         <nav>
-            <a href="index.html">Ana Sayfa</a> |
-            <a href="hakkimda.html">Hakkımda</a> |
-            <a href="yetenekler.html">Yeteneklerim</a> |
+            <a href="index.html">Ana Sayfa</a>
+            <a href="hakkimda.html">Hakkımda</a>
+            <a href="yetenekler.html">Yeteneklerim</a>
             <a href="iletisim.html">İletişim</a>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button>
         </nav>
     </header>
-    <div class"intro-container">
+
     <main>
-        <img src="profil.jpg" alt="Profil Fotoğrafım" class="profile-img">
-        <h2>Hoş Geldiniz!</h2>
-        <p>Merhaba, benim adım Asım. Bu site benim ilk web geliştirme ödevimdir.</p>
-    </div>
+        <div class="intro-container">
+            <a href="#profile-modal">
+                <img src="profil.jpg" alt="Profil Fotoğrafım" class="profile-img">
+            </a>
+            <div>
+                <h2>Hoş Geldiniz!</h2>
+                <p>Merhaba, benim adım Asım. Bu site benim ilk web geliştirme ödevimdir.</p>
+            </div>
+        </div>
     </main>
 
+    <!-- Instagram Tarzı Açılır Pencere ve Kapatma Tuşu -->
+    <div id="profile-modal" class="modal">
+        <a href="#" class="modal-close">&times;</a>
+        <div class="modal-content">
+            <img src="profil.jpg" alt="Büyük Profil Fotoğrafı">
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </body>
 </html>

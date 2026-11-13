@@ -10,10 +10,11 @@
     <header>
         <h1>İletişim</h1>
         <nav>
-            <a href="index.html">Ana Sayfa</a> |
-            <a href="hakkimda.html">Hakkımda</a> |
-            <a href="yetenekler.html">Yeteneklerim</a> |
+            <a href="index.html">Ana Sayfa</a>
+            <a href="hakkimda.html">Hakkımda</a>
+            <a href="yetenekler.html">Yeteneklerim</a>
             <a href="iletisim.html">İletişim</a>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button>
         </nav>
     </header>
 
@@ -23,14 +24,29 @@
 
         <form>
             <label>Adınız:</label><br>
-            <input type="text" name="ad"><br><br>
+            <input type="text" name="ad" style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color);"><br>
 
             <label>Mesajınız:</label><br>
-            <textarea name="mesaj" rows="4"></textarea><br><br>
+            <textarea name="mesaj" rows="4" style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--card-bg); color: var(--text-color);"></textarea><br>
 
-            <button type="submit">Gönder</button>
+            <button type="submit" class="btn">Gönder</button>
         </form>
     </main>
 
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </body>
 </html>

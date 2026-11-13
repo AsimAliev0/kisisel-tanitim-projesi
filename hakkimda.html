@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hakkımda</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Hakkımda</h1>
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="hakkimda.html">Hakkımda</a>
+            <a href="yetenekler.html">Yeteneklerim</a>
+            <a href="iletisim.html">İletişim</a>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Kısa Bilgiler</h2>
+        <div class="card" style="margin-bottom: 20px;">
+            <p>Bilgisayar mühendisliği okuyorum. Web tasarımı ve programlama ile ilgileniyorum.</p>
+        </div>
+        
+        <h3>Hobilerim</h3>
+        <div class="card-grid">
+            <div class="card">
+                <h3>📖 Kitap Okumak</h3>
+                <p>Yeni dünyalar keşfetmek ve bilgi dağarcığını geliştirmek.</p>
+            </div>
+            <div class="card">
+                <h3>💻 Kod Yazmak</h3>
+                <p>Algoritmalar kurmak, yeni projeler ve web siteleri geliştirmek.</p>
+            </div>
+            <div class="card">
+                <h3>🏋️‍♂️ Spor Yapmak</h3>
+                <p>Düzenli antrenman ve fiziksel gelişim odaklı yaşam tarzı.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+</body>
+</html>

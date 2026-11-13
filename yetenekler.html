@@ -10,22 +10,38 @@
     <header>
         <h1>Yeteneklerim</h1>
         <nav>
-            <a href="index.html">Ana Sayfa</a> |
-            <a href="hakkimda.html">Hakkımda</a> |
-            <a href="yetenekler.html">Yeteneklerim</a> |
+            <a href="index.html">Ana Sayfa</a>
+            <a href="hakkimda.html">Hakkımda</a>
+            <a href="yetenekler.html">Yeteneklerim</a>
             <a href="iletisim.html">İletişim</a>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button>
         </nav>
     </header>
 
     <main>
         <h2>Bildiğim Diller ve Teknolojiler</h2>
-        <ul>
-            <li>C Programlama Dili</li>
+        <ul class="skill-list">
+            <li>C Programlama</li>
             <li>Python</li>
-            <li>HTML</li>
+            <li>HTML5</li>
             <li>CSS3</li>
         </ul>
     </main>
 
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </body>
 </html>
