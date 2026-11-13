@@ -1,6 +1,6 @@
 # kisisel-tanitim-projesi
 blm2537 ODEVI
-hocam merhaba bu ilk haftanin videosu yapmak istediklerimi anlattim. bu yazinin altinda da drive linki var.
+haftalık drive linkleri
 
 hafta1
 https://drive.google.com/file/d/1c4d8vbzJaboop5ylNVdQ-_g3MugHF2dO/view?usp=sharing
